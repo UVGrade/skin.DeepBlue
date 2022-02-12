@@ -864,14 +864,7 @@
 				<animation effect="slide" end="0,-112" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
 				<depth>DepthBars</depth>
 				<animation effect="fade" start="0" end="100" time="300" condition="[Window.Previous(fullscreenvideo) | Window.Previous(startup)] + !Window.IsVisible(1109)">WindowOpen</animation>
-				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>110%</width>
-					<height>130</height>
-					<texture>frame/InfoBar.png</texture>
-					<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(screencalibration)">WindowClose</animation>
-				</control>
+				
 				<control type="grouplist">
 					<width>900</width>
 					<include content="TopBarLabels">
@@ -1115,35 +1108,26 @@
 		<width>auto</width>
 	</include>
 	<include name="ColoredBackgroundImages">
+		
 		<control type="image">
 			<depth>DepthBackground</depth>
 			<include>FullScreenDimensions</include>
 			<aspectratio>scale</aspectratio>
-			<texture colordiffuse="primary_background">special://skin/extras/backgrounds/primary.jpg</texture>
+			<texture >special://skin/extras/backgrounds/wild blue.jpg</texture>
 		</control>
 		<control type="image">
 			<depth>DepthBackground</depth>
 			<include>FullScreenDimensions</include>
 			<aspectratio>scale</aspectratio>
-			<texture colordiffuse="secondary_background" fallback="special://skin/extras/backgrounds/pattern1.jpg">$INFO[Skin.String(background_overlay),special://skin/extras/backgrounds/pattern,.jpg]</texture>
+			<!--<texture colordiffuse="third_background" fallback="special://skin/extras/backgrounds/pattern1.jpg">$INFO[Skin.String(background_overlay),special://skin/extras/backgrounds/pattern,.jpg]</texture>-->
+		
 		</control>
 	</include>
 	<include name="DefaultBackground">
 		<definition>
-			<control type="videowindow">
-				<depth>DepthBackground</depth>
-				<include>FullScreenDimensions</include>
-				<visible>Player.HasVideo</visible>
-				<visible>!Slideshow.IsActive</visible>
-			</control>
-			<control type="visualisation">
-				<include>FullScreenDimensions</include>
-				<visible>!Slideshow.IsActive</visible>
-				<visible>Player.HasAudio + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia)) + Visualisation.Enabled</visible>
-			</control>
 			<control type="group">
 				<include>FullScreenDimensions</include>
-				<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
+				<!--<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>-->
 				<control type="group">
 					<animation effect="fade" start="100" end="bg_alpha" time="0" condition="!Control.IsVisible(31111)">Conditional</animation>
 					<animation effect="fade" start="0" end="100" time="300" condition="Window.Previous(fullscreenvideo) | Window.Previous(FullscreenGame) | Window.Previous(startup)">WindowOpen</animation>
@@ -1188,13 +1172,7 @@
 				<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(visualisation) | Window.Next(screencalibration)">WindowClose</animation>
 				<animation effect="fade" start="0" end="100" time="300" condition="Window.Previous(fullscreenvideo) | Window.Previous(startup) | Window.Previous(visualisation)">WindowOpen</animation>
 				<bottom>0</bottom>
-				<control type="image">
-					<left>0</left>
-					<bottom>0</bottom>
-					<width>110%</width>
-					<height>115</height>
-					<texture flipy="true">frame/InfoBar.png</texture>
-				</control>
+				
 				<control type="group">
 					<visible>$PARAM[info_visible]</visible>
 					<visible>!System.HasActiveModalDialog</visible>
@@ -1356,6 +1334,104 @@
 				<visible>Control.HasFocus(87) + Player.SeekEnabled</visible>
 			</control>
 		</definition>
+	</include>
+	
+	<include name="HeadingPanel">
+		<param name="sublabel">$INFO[Container.SortMethod,$LOCALIZE[31022]: ,  ∙  ]$INFO[Container.CurrentItem,, / ]$INFO[Container.NumItems]</param>
+		<definition>
+			<control type="image">
+				<texture flipx="false" >special://skin/extras/backgrounds/heading.jpg</texture>
+				<bordersize>20</bordersize>
+				<width>120%</width>
+				<left>-10%</left>
+				<top>-40</top>
+				<height>348</height>
+			</control>
+			<control type="image">
+				<texture flipx="false" colordiffuse="secondary_background">colors/white.png</texture>
+				<width>120%</width>
+				<height>78</height>
+				<top>205</top>
+			</control>
+			<control type="label">
+				<font>font_clock</font>
+				<shadowcolor>text_shadow</shadowcolor>
+				<height>205</height>
+				<width>auto</width>
+				<top>200</top>
+				<left>150</left>
+				<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(screencalibration)">WindowClose</animation>
+				<label>$INFO[System.Time]</label>
+			</control>
+			
+			<control type="grouplist">
+				<visible>!Control.IsVisible(503) + Player.HasMedia + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
+				<animation effect="fade" time="200">VisibleChange</animation>
+				<left>480</left>
+				<top>224</top>
+				<orientation>horizontal</orientation>
+				<height>38</height>
+				<top>14</top>
+				<itemgap>5</itemgap>
+				<usecontrolcoords>true</usecontrolcoords>
+				<control type="image">
+					<top>4</top>
+					<width>32</width>
+					<height>32</height>
+					<aspectratio>keep</aspectratio>
+					<texture colordiffuse="button_focus">$VAR[NowPlayingIconVar]</texture>
+				</control>
+				<control type="label" id="7700">
+					<label>$INFO[Player.Title]</label>
+					
+					<font>font14</font>
+					<textcolor>grey</textcolor>
+					<shadowcolor>text_shadow</shadowcolor>
+					<height>25</height>
+					<width>700</width>
+					<scroll>true</scroll>
+				</control>
+			</control>
+			<control type="group">
+				<depth>DepthBars</depth>
+				<animation effect="slide" end="0,-90" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
+				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+				<top>30</top>
+				<left>90</left>
+				<control type="image">
+					<left>80</left>
+					<top>10</top>
+					<aspectratio>keep</aspectratio>
+					<width>192</width>
+					<height>130</height>
+					<texture>special://xbmc/media/banner.png</texture>
+				</control>
+			</control>
+			
+			<control type="videowindow">
+				<height>275</height>
+				<left>1150</left>
+				<top>45</top>
+				<visible>Player.HasVideo</visible>
+				<visible>!Slideshow.IsActive</visible>
+			</control>
+			<control type="visualisation">
+				<height>275</height>
+				<left>1150</left>
+				<top>45</top>
+				<visible>!Slideshow.IsActive</visible>
+				<visible>Player.HasAudio + String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia)) + Visualisation.Enabled</visible>
+			</control>
+		</definition>
+	</include>
+	<include name="BodyPanel">
+		<control type="image">
+			<texture flipx="false" colordiffuse="button_bg">colors/white.png</texture>
+			<bordersize>20</bordersize>
+			<width>1380</width>
+			<height>800</height>
+		</control>
 	</include>
 	<include name="ContentPanel">
 		<param name="width">500</param>
