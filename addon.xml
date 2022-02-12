@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="skin.DeepBlue" version="3.0.5" name="Deep Blue" provider-name="darthgamer64">
+	<requires>
+		<import addon="xbmc.gui" version="5.15.0"/>
+	</requires>
+	<extension point="xbmc.gui.skin" debugging="false">
+		<res width="1920" height="1440" aspect="4:3" default="false" folder="xml" />
+		<res width="1920" height="1280" aspect="3:2" default="false" folder="xml" />
+		<res width="1920" height="1200" aspect="16:10" default="false" folder="xml" />
+		<res width="2040" height="1080" aspect="17:9" default="false" folder="xml" />
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
+		<res width="2560" height="1080" aspect="21:9" default="false" folder="xml" />
+		<res width="2338" height="1080" aspect="19.5:9" default="false" folder="xml" />
+		<res width="2160" height="1080" aspect="18:9" default="false" folder="xml" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="af_ZA">Deep Blue oortreksel deur darthgamer64.</summary>
+		<summary lang="be_BY">Абалонка "Deep Blue" ад darthgamer64.</summary>
+		<summary lang="bg_BG">Deep Blue облик от darthgamer64.</summary>
+		<summary lang="ca_ES">Aparença Deep Blue per darthgamer64.</summary>
+		<summary lang="cs_CZ">Vzhled Deep Blue od autora darthgamer64.</summary>
+		<summary lang="da_DK">Deep Blue skin af darthgamer64.</summary>
+		<summary lang="de_DE">Deep Blue Skin von darthgamer64.</summary>
+		<summary lang="el_GR">Το κέλυφος Deep Blue από τον darthgamer64.</summary>
+		<summary lang="en_GB">Deep Blue skin by darthgamer64.</summary>
+		<summary lang="en_NZ">Deep Blue skin by darthgamer64.</summary>
+		<summary lang="en_US">Deep Blue skin by darthgamer64.</summary>
+		<summary lang="es_AR">Skin Deep Blue por darthgamer64.</summary>
+		<summary lang="es_ES">Skin Deep Blue, creado por darthgamer64.</summary>
+		<summary lang="es_MX">Máscara Deep Blue por darthgamer64.</summary>
+		<summary lang="et_EE">Deep Blue rüü autor on darthgamer64.</summary>
+		<summary lang="eu_ES">Deep Blue azala darthgamer64 egina.</summary>
+		<summary lang="fi_FI">Deep Blue on darthgamer64:n luoma Kodin oletusulkoasu.</summary>
+		<summary lang="fr_CA">Habillage Deep Blue par darthgamer64.</summary>
+		<summary lang="fr_FR">Deep Blue, un habillage par darthgamer64.</summary>
+		<summary lang="gl_ES">Pel Deep Blue por darthgamer64.</summary>
+		<summary lang="he_IL">מעטפת Deep Blue של darthgamer64.</summary>
+		<summary lang="hr_HR">Deep Blue presvlaka autora darthgamer64.</summary>
+		<summary lang="hu_HU">Deep Blue felszín. Készítette darthgamer64.</summary>
+		<summary lang="is_IS">Deep Blue-skinnið eftir darthgamer64.</summary>
+		<summary lang="it_IT">Skin Deep Blue da darthgamer64.</summary>
+		<summary lang="ja_JP">Deep Blueスキン by darthgamer64.</summary>
+		<summary lang="ko_KR">darthgamer64가 만든 Deep Blue 스킨.</summary>
+		<summary lang="lt_LT">Deep Blue teminė išvaizda, kurią sukūrė darthgamer64.</summary>
+		<summary lang="lv_LV">Deep Blue apvalks no darthgamer64.</summary>
+		<summary lang="mk_MK">Deep Blue skin by darthgamer64.</summary>
+		<summary lang="ms_MY">Kulit Deep Blue oleh darthgamer64 dan rakan-rakan.</summary>
+		<summary lang="nb_NO">Esturay-drakt av darthgamer64.</summary>
+		<summary lang="nl_NL">Deep Blue skin door darthgamer64.</summary>
+		<summary lang="pl_PL">Skóra Eustary autorstwa darthgamer64.</summary>
+		<summary lang="pt_BR">Skin Deep Blue por darthgamer64.</summary>
+		<summary lang="pt_PT">Visual Deep Blue de darthgamer64.</summary>
+		<summary lang="ro_RO">Tema Deep Blue de darthgamer64.</summary>
+		<summary lang="ru_RU">Обложка Deep Blue . Авторы: darthgamer64.</summary>
+		<summary lang="sk_SK">Vzhľad Deep Blue, vytvorili darthgamer64.</summary>
+		<summary lang="sr_RS">Маска Deep Blue аутора darthgamer64.</summary>
+		<summary lang="sr_RS@latin">Maska Deep Blue autora darthgamer64.</summary>
+		<summary lang="sv_SE">Deep Blue, ett skal av darthgamer64.</summary>
+		<summary lang="szl">Skōra Deep Blue ôd darthgamer64.</summary>
+		<summary lang="th_TH">สกิน Deep Blue โดย darthgamer64.</summary>
+		<summary lang="tr_TR">Deep Blue dış görünümü. darthgamer64.</summary>
+		<summary lang="uk_UA">Обкладинка Deep Blue від darthgamer64.</summary>
+		<summary lang="vi_VN">Giao diện Deep Blue của darthgamer64.</summary>
+		<summary lang="zh_CN">darthgamer64 开发的 Deep Blue 皮肤。</summary>
+		<summary lang="zh_TW">darthgamer64 製作的Deep Blue佈景主題</summary>
+		<description lang="af_ZA">Deep Blue is die bestek oortreksel vir Kodi 17.0 en op. Dit poog om maklik te wees vir eerste keer Kodi gebruikers om te verstaan en te gebruik.</description>
+		<description lang="be_BY">Deep Blue - прадвызначаная абалонка для Kodi 17.0 і пазнейшых версій. Яна будзе простай і зразумелай для карыстальнікаў, якія не мелі досведу працы з Kodi.</description>
+		<description lang="bg_BG">Deep Blue е стандартният облик на Kodi 17 и по-новите версии. Целта е да се улеснят хората, които се сблъскват за първи път с Kodi.</description>
+		<description lang="ca_ES">Deep Blue és l'aparença predeterminada de Kodi 17.0 i posteriors. Per als usuaris per primera vegada de Kodi, intenta ser fàcil d'entendre i d'utilitzar.</description>
+		<description lang="cs_CZ">Deep Blue je výchozí vzhled pro Kodi 17.0 a vyšší. Snaží se být jednoduše pochopitelný a použitelný pro nové uživatele Kodi.</description>
+		<description lang="da_DK">Deep Blue er standardbrugerfladen for Kodi 17.0 og højere. Det forenkler førstegangsbrugen af Kodi ved at gøre det nemmere at forstå og bruge.</description>
+		<description lang="de_DE">Deep Blue ist der Standardskin für Kodi 17.0 und höher. Ziel war es, einen einfach zu bedienenden Skin für neue Kodi-Benutzer zu entwickeln.</description>
+		<description lang="el_GR">Το Deep Blue είναι η προεπιλεγμένη αμφίεση για τις εκδόσεις Kodi 17.0 και άνω. Επιχειρεί να είναι προσιτό στους αρχάριους χρήστες του Kodi για να το κατανοήσουν και να το χρησιμοποιήσουν.</description>
+		<description lang="en_GB">Deep Blue is a custom skin with ocean blue undertones. Feel like you're on a tranquil beach.</description>
+		<description lang="en_NZ">eep Blue is a custom skin with ocean blue undertones. Feel like you're on a tranquil beach.</description>
+		<description lang="en_US">eep Blue is a custom skin with ocean blue undertones. Feel like you're on a tranquil beach.</description>
+		<description lang="es_AR">Deep Blue es el skin por defecto para Kodi 17.0 y posteriores. Intenta ser fácil de entender y utilizar para los usuarios Kodi primerizos.</description>
+		<description lang="es_ES">Deep Blue es el skin por defecto para Kodi 17.0 o superior. Su objetivo es la facilidad de comprensión y uso para usuarios primerizos de Kodi.</description>
+		<description lang="es_MX">Deep Blue es la máscara por defecto para Kodi 17.0 y superior. Su objetivo es ser fácil de entender y usar para los usuarios nuevos a Kodi.</description>
+		<description lang="et_EE">Deep Blue on vaikimisi Kodi rüü versioonist 17.0. Kodi esmakasutajatel on rüüd kerge mõista ja kasutada.</description>
+		<description lang="eu_ES">Deep Blue azala kodi 17.0 eta berriagoen azal lehenetsia da. Kodiren erabiltzaile hasiberrientzako erabilerraza eta ulerterraza izaten saiatzen da.</description>
+		<description lang="fi_FI">Deep Blue on oletusulkoasu Kodin versiosta 17.0 lähtien. Se pyrkii olemaan helppo ymmärtää ja käyttää Kodin ensikäyttäjille. </description>
+		<description lang="fr_CA">Deep Blue est l’habillage par défaut pour Kodi 17.0 et ultérieure. Il s’efforce d’être facile à comprendre et à utiliser pour les utilisateurs débutants de Kodi.</description>
+		<description lang="fr_FR">Deep Blue est l'habillage d'origine pour Kodi 17.0 et supérieur. Il est facile à comprendre et à utiliser pour les utilisateurs novices de Kodi.</description>
+		<description lang="gl_ES">Deep Blue é a pel predefinida para Kodi 17.0 e superior. Esta tenta ser doada de entender e usar polos usuarios recen chegados a Kodi.</description>
+		<description lang="he_IL">Deep Blue היא מעטפת ברירת המחדל של קודי מגרסאות 17.0 ומעלה. מטרת מעטפת זו היא להיות פשוטה לשימוש ולהכרה ראשונית על ידי משתמשים חדשים.</description>
+		<description lang="hr_HR">Deep Blue je uobičajena presvlaka za Kodi 17.0 i novije inačice. To je pokušaj da se novim korisnicima olakša prvo korištenje i kasnija upotreba Kodija.</description>
+		<description lang="hu_HU">Az Deep Blue az alapértelmezett felszín a 17.0 és újabb Kodi kiadásokban.  Megpróbál könnyen kezelhető és használható lenni, az újonc Kodi felhasználóknak is.</description>
+		<description lang="is_IS">Deep Blue er sjálfgefið skinn fyrir Kodi 17.0 og nýrri. Með því á að vera auðvelt fyrir fyrsta-skiptis Kodi-notendur að skilja og nota viðmótið.</description>
+		<description lang="it_IT">Deep Blue è la skin predefinita di Kodi 17.0 e successivi. Cerca di essere facile da capire e usare per i nuovi utenti di Kodi.</description>
+		<description lang="ja_JP">Deep BlueはKodi 17.0およびそれ以上のバージョンで標準のスキンです。ユーザーが初めてKodiに触れる際にわかりやすく使えるようにしてあります。</description>
+		<description lang="ko_KR">Deep Blue는 Kodi 17.0이상의 기본 스킨입니다. 처음 Kodi를 접하는 사용자가 쉽게 이해하고 사용할 수 있도록 만들었습니다.</description>
+		<description lang="lt_LT">Deep Blue yra numatytoji Kodi 17.0 ir aukštesnių versijų teminė išvaizda. Jos tikslas yra būti lengvai perprantama naujiems Kodi vartotojams.</description>
+		<description lang="ms_MY">Deep Blue ialah kulit lalai untuk Kodi 17.0 dan ke atas. Kulit yang mudah digunakan buat pengguna Kodi kali pertama untuk memahami dan menggunakannya.</description>
+		<description lang="nb_NO">Deep Blue er forvalgt drakt til Kodi 17.0 og nyere. Det tar mål av seg å være en enkel drakt for førstegangsbrukere av Kodi, slik at det er til å forstå og kan brukes.</description>
+		<description lang="nl_NL">Deep Blue is de standaardskin voor Kodi 17.0 en hoger. Het tracht eenvoudig te begrijpen en te gebruiken te zijn voor beginnende Kodi-gebruikers.</description>
+		<description lang="pl_PL">Eustary jest domyślną skórą Kodi dla wersji 17.0 i późniejszych. Jest próbą łatwego wprowadzenia początkujących użytkowników w funkcje Kodi.</description>
+		<description lang="pt_BR">Deep Blue é a skin padrão para o Kodi 17.0 e acima. Objetiva ser fácil para usuários que iniciam no Kodi pela primeira vez, facilitando aprendizagem de uso do mesmo.</description>
+		<description lang="pt_PT">O Deep Blue é o visual por omissão para o Kodi 17.0 e posteriores. Tenta ser simples para os utilizadores menos experientes do Kodi compreenderem e usarem.</description>
+		<description lang="ro_RO">Deep Blue este tema implicită pentru Kodi 17.0 și versiunile ulterioare. Încearcă să fie ușor de înțeles și folosit pentru utilizatorii care folosesc Kodi pentru prima dată.</description>
+		<description lang="ru_RU">Deep Blue — это стандартная обложка Kodi, начиная с версии 17.0.&#10;Простая и понятная в использовании для новых пользователей Kodi.</description>
+		<description lang="sk_SK">Deep Blue je predvolený vzhľad pre Kodi 17.0 a vyššie. Je výsledkom snahy o vzhľad, ktorý bude ľahko zrozumiteľný a použiteľný pre nových používateľov Kodi.</description>
+		<description lang="sr_RS">Deep Blue је подразумевана маска за Kodi 17.0 и изнад. Покушава да буде једноставан за разумевање и коришћење новим корисницима Kodi-ја.</description>
+		<description lang="sr_RS@latin">Deep Blue je podrazumevana maska za Kodi 17.0 i iznad. Pokušava da bude jednostavan za razumevanje i korišćenje novim korisnicima Kodija.</description>
+		<description lang="sv_SE">Deep Blue är standardskalet för Kodi 17.0 och uppåt. Det är utformat för att vara lättförståeligt och användarvänligt för förstagångsanvändare av Kodi.</description>
+		<description lang="szl">Deep Blue je wychodnōm skōrōm Kodi dlŏ wersyje 17.0 i dalszych. Prōbuje być proste dlŏ używŏczōw, dlŏ kerych Kodi je nowe</description>
+		<description lang="th_TH">Deep Blue คือหน้าตาเริ่มต้นของ Kodi 17.0 และสูงกว่า เป็นความพยายามที่จะทำให้ง่ายสำหรับผู้ใช้ Kodi ในครั้งแรก ที่จะเข้าใจและใช้งาน</description>
+		<description lang="tr_TR">Deep Blue Kodi 17.0 ve yukarısı için varsayılan dış görünümdür. İlk kez Kodi kullananlar için anlaşılması ve kullanımı kolaydır.</description>
+		<description lang="uk_UA">Deep Blue є стандартною обкладинкою Kodi 17.0 і подальших версій. Її основна ідея — простота використання для нових користувачів Kodi.</description>
+		<description lang="vi_VN">Deep Blue là giao diện mặc định cho Kodi 17.0 trở lên. Nó dễ dàng cho người dùng Kodi lần đầu tiên hiểu và sử dụng.</description>
+		<description lang="zh_CN">Deep Blue 是 Kodi 17.0 的默认皮肤。它力求使首次使用 Kodi 的用户易于上手。</description>
+		<description lang="zh_TW">Deep Blue是Kodi 17.0開始搭載的預設佈景主題。主要在讓第一次使用 Kodi 的使用者可以簡單地上手。</description>
+		<disclaimer lang="af_ZA">Deep Blue is die bestek oortreksel vir Kodi, verwydering mag probleme veroorsaak</disclaimer>
+		<disclaimer lang="be_BY">Deep Blue - прадвызначаная абалонка для Kodi. Яе выдаленне можа прывесці да праблем</disclaimer>
+		<disclaimer lang="bg_BG">Deep Blue е стандартният облик на Kodi. Премахването му може да предизвика проблеми</disclaimer>
+		<disclaimer lang="ca_ES">Deep Blue és l'aparença predeterminada de Kodi, si s'elimina pot causar problemes.</disclaimer>
+		<disclaimer lang="cs_CZ">Deep Blue je výchozí vzhled pro Kodi, jeho odebrání může způsobit problémy</disclaimer>
+		<disclaimer lang="cy_GB">Deep Blue yw croen diofyn Kodi. Efallai bydd ei dynnu yn achosi problemau</disclaimer>
+		<disclaimer lang="da_DK">Deep Blue er standard brugerfladen. Fjernes det kan der opstå problemer.</disclaimer>
+		<disclaimer lang="de_DE">Deep Blue ist der Standardskin von Kodi. Ein Entfernen des Skins kann Probleme verursachen.</disclaimer>
+		<disclaimer lang="el_GR">Το Deep Blue είναι η προεπιλεγμένη αμφίεση για το Kodi. Η αφαίρεσή του μπορεί να δημιουργήσει προβλήματα.</disclaimer>
+		<disclaimer lang="en_GB">Deep Blue is the default skin for Kodi, removing it may cause issues</disclaimer>
+		<disclaimer lang="en_NZ">Deep Blue is the default skin for Kodi, removing it may cause issues</disclaimer>
+		<disclaimer lang="en_US">Deep Blue is the default skin for Kodi, removing it may cause issues</disclaimer>
+		<disclaimer lang="es_AR">Deep Blue es el skin por defecto de Kodi. Borrarlo puede causar problemas</disclaimer>
+		<disclaimer lang="es_ES">Deep Blue es el skin por defecto de Kodi. Desinstalarlo puede causar problemas.</disclaimer>
+		<disclaimer lang="es_MX">Deep Blue es la máscara predeterminada de Kodi, eliminarla puede causar problemas</disclaimer>
+		<disclaimer lang="et_EE">Deep Blue on vaikimisi Kodi rüü, selle eemaldamine võib põhjustada probleeme</disclaimer>
+		<disclaimer lang="eu_ES">Deep Blue Kodiren azal lehenetsia da. Ezabatzeak arazoak eragin ditzake</disclaimer>
+		<disclaimer lang="fi_FI">Deep Blue on Kodin oletusulkoasu, sen poisto voi aiheuttaa ongelmia</disclaimer>
+		<disclaimer lang="fr_CA">Deep Blue est l’habillage par défaut de Kodi, le supprimer peut créer des problèmes</disclaimer>
+		<disclaimer lang="fr_FR">Deep Blue est l'habillage d'origine de Kodi, le retirer peut créer des problèmes</disclaimer>
+		<disclaimer lang="gl_ES">Deep Blue é a pel predefinida para Kodi e eliminala pode causar problemas.</disclaimer>
+		<disclaimer lang="he_IL">Deep Blue היא מעטפת ברירת המחדל של קודי, הסרתה עלולה לגרום לתקלות</disclaimer>
+		<disclaimer lang="hr_HR">Deep Blue je uobičajena presvlaka za Kodi, njegovim uklanjanjem može uzrokovati poteškoće</disclaimer>
+		<disclaimer lang="hu_HU">Az Deep Blue az alapértelmezett Kodi felszín. Eltávolítása problémákat okozhat.</disclaimer>
+		<disclaimer lang="is_IS">Deep Blue er sjálfgefið skinn fyrir Kodi, ef það er fjarlægt gætu komið upp ýmis vandamál</disclaimer>
+		<disclaimer lang="it_IT">Deep Blue è la skin predefinita di Kodi, rimuoverla potrebbe causare problemi</disclaimer>
+		<disclaimer lang="ja_JP">Deep BlueはKodiのデフォルトスキンなので、これを削除するとうまく動かなくなる可能性があります</disclaimer>
+		<disclaimer lang="ko_KR">Deep Blue는 Kodi의 기본스킨으로 제거시 문제가 생길 수 있습니다.</disclaimer>
+		<disclaimer lang="lt_LT">Deep Blue yra numatytoji Kodi teminė išvaizda, jos pašalinimas gali sukelti problemų</disclaimer>
+		<disclaimer lang="ms_MY">Deep Blue ialah kulit lalai Kodi, mengubahnya boleh menimbulkan isu.</disclaimer>
+		<disclaimer lang="nb_NO">Deep Blue er forvalgt drakt for Kodi, dersom du fjerner det kan det forårsake problemer.</disclaimer>
+		<disclaimer lang="nl_NL">Deep Blue is de standaardskin voor Kodi, het verwijderen van Deep Blue kan leiden tot problemen.</disclaimer>
+		<disclaimer lang="pl_PL">Eustary jest domyślną skórą Kodi, usunięciejej może powodować problemy</disclaimer>
+		<disclaimer lang="pt_BR">Deep Blue é a skin padrão para o Kodi, removendo-a pode causar problemas</disclaimer>
+		<disclaimer lang="pt_PT">O Deep Blue é o visual por omissão do Kodi; se o remover, poderá ter alguns problemas</disclaimer>
+		<disclaimer lang="ro_RO">Deep Blue este tema implicită pentru Kodi, eliminarea ei poate cauza probleme</disclaimer>
+		<disclaimer lang="ru_RU">Deep Blue — это стандартная обложка Kodi, и ее удаление может привести к возникновению проблем</disclaimer>
+		<disclaimer lang="sk_SK">Deep Blue je predvolený vzhľad pre Kodi, jeho odstránenie môže spôsobiť problémy</disclaimer>
+		<disclaimer lang="sr_RS">Deep Blue је подразумевана маска за Kodi, уклањање може изазвати проблеме</disclaimer>
+		<disclaimer lang="sr_RS@latin">Deep Blue je podrazumevana maska za Kodi, uklanjanje može izazvati probleme</disclaimer>
+		<disclaimer lang="sv_SE">Deep Blue är Kodis standardskal. Om du tar bort det kan det orsaka problem.</disclaimer>
+		<disclaimer lang="szl">Deep Blue je wychodnōm skōrōm Kodi, jij uchrōniynie może sprŏwiać niyprzileżytości</disclaimer>
+		<disclaimer lang="th_TH">Deep Blue เป็นหน้าตาเริ่มต้นสำหรับ Kodi, การลบมัน อาจทำให้เกิดปัญหา</disclaimer>
+		<disclaimer lang="tr_TR">Deep Blue Kodi için varsayılan dış görünümdür, kaldırmak sorunlara yol açabilir</disclaimer>
+		<disclaimer lang="uk_UA">Deep Blue — основна обкладинка Kodi, і її видалення може призвести до проблем</disclaimer>
+		<disclaimer lang="vi_VN">Deep Blue là giao diện mặc định cho Kodi, loại bỏ nó có thể gây ra sự cố</disclaimer>
+		<disclaimer lang="zh_CN">Deep Blue 是 Kodi 的默认皮肤，删除它可能导致故障。</disclaimer>
+		<disclaimer lang="zh_TW">Deep Blue 是 Kodi 預設的佈景主題，移除它可能會造成問題</disclaimer>
+		<platform>all</platform>
+		<license>CC BY-SA 4.0, GNU GENERAL PUBLIC LICENSE Version 2.0</license>
+		<forum>http://forum.kodi.tv/</forum>
+		<source>https://github.com/xbmc/skin.Deep Blue/</source>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshot-01.jpg</screenshot>
+		</assets>
+	</extension>
+</addon>
