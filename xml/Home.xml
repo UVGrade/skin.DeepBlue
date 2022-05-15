@@ -1016,7 +1016,7 @@
 							<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
 						</item>
 						<item>
-							<label>$LOCALIZE[5]</label>
+							<label>$LOCALIZE[13000]</label>
 							<onclick>ActivateWindow(settings)</onclick>
 							<property name="menu_id">$NUMBER[15000]</property>
 							<property name="id">weather</property>
@@ -1077,7 +1077,7 @@
 				<param name="breadcrumbs_label" value="Home" />
 			</include>-->
 			<include content="HeadingPanel">
-				<param name="breadcrumbs_label" Value="Home" />
+				<param name="breadcrumbs_label" value="Home" />
 			</include>
 			
 			

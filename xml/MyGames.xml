@@ -77,7 +77,7 @@
 					</control>
 				</control>
 			</control>
-			<include content="TopBar">
+			<include content="HeadingPanel">
 				<param name="breadcrumbs_label" value="$VAR[BreadcrumbsGameVar]" />
 			</include>
 			<include content="BottomBar">

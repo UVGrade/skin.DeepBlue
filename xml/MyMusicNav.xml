@@ -21,7 +21,7 @@
 				<include>Visible_Left</include>
 				<include>ListThumbInfoPanel</include>
 			</control>
-			<include content="TopBar">
+			<include content="HeadingPanel">
 				<param name="breadcrumbs_label" value="$LOCALIZE[2]" />
 			</include>
 			<include content="BottomBar">

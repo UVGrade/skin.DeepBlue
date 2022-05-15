@@ -22,6 +22,7 @@
 				<include>OpenClose_Left</include>
 				<visible>Control.IsVisible(55)</visible>
 				<include>Visible_Left</include>
+				<!--sidebar image + description-->
 				<include>ListThumbInfoPanel</include>
 			</control>
 			<control type="group">
@@ -78,9 +79,10 @@
 					</control>
 				</control>
 			</control>
-			<include content="TopBar">
+			<include content="HeadingPanel">
 				<param name="breadcrumbs_label" value="$VAR[BreadcrumbsVideoVar]" />
 			</include>
+
 			<include content="BottomBar">
 				<param name="info_visible" value="true" />
 			</include>
@@ -170,6 +172,8 @@
 					<include>MediaMenuNowPlaying</include>
 				</control>
 			</control>
+			
+			
 		</control>
 	</controls>
 </window>

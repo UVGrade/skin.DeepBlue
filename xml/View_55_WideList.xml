@@ -5,11 +5,11 @@
 			<include>OpenClose_Right</include>
 			<visible>Control.IsVisible(55)</visible>
 			<include>Visible_Right</include>
-			<control type="fixedlist" id="55">
-				<left>594</left>
-				<top>list_y_offset</top>
-				<bottom>list_y_offset</bottom>
-				<right>0</right>
+			<control type="list" id="55">
+				<left>150</left>
+				<top>400</top>
+				<bottom>50</bottom>
+				<right>150</right>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<orientation>vertical</orientation>
 				<pagecontrol>531</pagecontrol>
@@ -22,6 +22,7 @@
 				<viewtype label="$LOCALIZE[31107]">list</viewtype>
 				<focusedlayout height="list_item_height" condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies) | Container.Content(musicvideos) | Container.Content(videos) | Container.Content(games) | Window.IsActive(videoplaylist) | Window.IsActive(musicplaylist)">
 					<control type="image">
+						<top>5</top>
 						<left>0</left>
 						<right>0</right>
 						<bottom>0</bottom>
@@ -58,6 +59,13 @@
 				</focusedlayout>
 				<itemlayout height="list_item_height" condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies) | Container.Content(musicvideos) | Container.Content(videos) | Container.Content(games) | Window.IsActive(videoplaylist) | Window.IsActive(musicplaylist)">
 					<control type="image">
+						<top>5</top>
+						<left>0</left>
+						<right>0</right>
+						<bottom>0</bottom>
+						<texture colordiffuse="button_nofocus">lists/focus.png</texture>
+					</control>
+					<control type="image">
 						<left>35</left>
 						<centertop>50%</centertop>
 						<width>32</width>
@@ -86,6 +94,7 @@
 				</itemlayout>
 				<focusedlayout height="list_item_height" condition="!Container.Content(songs) + !Container.Content(addons) + !Container.Content(playlists) + !Container.Content() + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(movies) + !Container.Content(musicvideos) + !Container.Content(videos)">
 					<control type="image">
+						<top>5</top>
 						<left>0</left>
 						<right>0</right>
 						<bottom>0</bottom>
@@ -122,6 +131,13 @@
 				</focusedlayout>
 				<itemlayout height="list_item_height" condition="!Container.Content(songs) + !Container.Content(addons) + !Container.Content(playlists) + !Container.Content() + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(movies) + !Container.Content(musicvideos) + !Container.Content(videos)">
 					<control type="image">
+						<top>5</top>
+						<left>0</left>
+						<right>0</right>
+						<bottom>0</bottom>
+						<texture colordiffuse="button_nofocus">lists/focus.png</texture>
+					</control>
+					<control type="image">
 						<left>35</left>
 						<centertop>50%</centertop>
 						<width>32</width>
@@ -150,6 +166,7 @@
 				</itemlayout>
 				<focusedlayout height="list_item_height" condition="Container.Content(playlists) | Container.Content()">
 					<control type="image">
+						<top>5</top>
 						<left>0</left>
 						<right>0</right>
 						<bottom>0</bottom>
@@ -176,6 +193,13 @@
 					</control>
 				</focusedlayout>
 				<itemlayout height="list_item_height" condition="Container.Content(playlists) | Container.Content()">
+					<control type="image">
+						<top>5</top>
+						<left>0</left>
+						<right>0</right>
+						<bottom>0</bottom>
+						<texture colordiffuse="button_nofocus">lists/focus.png</texture>
+					</control>
 					<control type="image">
 						<left>20</left>
 						<top>10</top>
