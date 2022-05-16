@@ -22,8 +22,8 @@
 				<include>OpenClose_Left</include>
 				<visible>Control.IsVisible(55)</visible>
 				<include>Visible_Left</include>
-				<!--sidebar image + description-->
-				<include>ListThumbInfoPanel</include>
+				<!--sidebar image + description
+				<include>ListThumbInfoPanel</include>-->
 			</control>
 			<control type="group">
 				<depth>DepthContentPanel</depth>

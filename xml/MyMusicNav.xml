@@ -19,7 +19,8 @@
 				<include>OpenClose_Left</include>
 				<visible>Control.Isvisible(54) | Control.IsVisible(55)</visible>
 				<include>Visible_Left</include>
-				<include>ListThumbInfoPanel</include>
+				<!--sidebar image + description
+				<include>ListThumbInfoPanel</include>-->
 			</control>
 			<include content="HeadingPanel">
 				<param name="breadcrumbs_label" value="$LOCALIZE[2]" />

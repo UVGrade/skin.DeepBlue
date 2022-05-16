@@ -63,7 +63,7 @@
 						<left>0</left>
 						<right>0</right>
 						<bottom>0</bottom>
-						<texture colordiffuse="button_nofocus">lists/focus.png</texture>
+						<texture colordiffuse="button_bg">lists/focus.png</texture>
 					</control>
 					<control type="image">
 						<left>35</left>
@@ -135,7 +135,7 @@
 						<left>0</left>
 						<right>0</right>
 						<bottom>0</bottom>
-						<texture colordiffuse="button_nofocus">lists/focus.png</texture>
+						<texture colordiffuse="button_bg">lists/focus.png</texture>
 					</control>
 					<control type="image">
 						<left>35</left>
@@ -198,7 +198,7 @@
 						<left>0</left>
 						<right>0</right>
 						<bottom>0</bottom>
-						<texture colordiffuse="button_nofocus">lists/focus.png</texture>
+						<texture colordiffuse="button_bg">lists/focus.png</texture>
 					</control>
 					<control type="image">
 						<left>20</left>
