@@ -1150,7 +1150,7 @@
 					<include>ColoredBackgroundImages</include>
 				</control>
 				<control type="group" id="31111">
-					<visible>![Player.HasVideo | [Player.HasAudio + Visualisation.Enabled + !String.IsEmpty(Visualisation.Name)]] | !String.IsEmpty(Window(Videos).Property(PlayingBackgroundMedia))</visible>
+					<visible>true</visible>
 					<depth>DepthBackground</depth>
 					<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 					<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
@@ -1484,7 +1484,7 @@
 			<texture flipx="false" colordiffuse="button_bg">colors/white.png</texture>
 			<bordersize>20</bordersize>
 			<width>1380</width>
-			<height>800</height>
+			<height>1200</height>
 		</control>
 	</include>
 	<include name="ContentPanel">
