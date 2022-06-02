@@ -1366,8 +1366,8 @@
 			<control type="image">
 				<texture flipx="false" colordiffuse="secondary_background">colors/white.png</texture>
 				<width>120%</width>
-				<height>78</height>
-				<top>205</top>
+				<height>75</height>
+				<top>210</top>
 			</control>
 			<control type="label">
 				<font>font_clock</font>
