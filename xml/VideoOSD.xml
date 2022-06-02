@@ -15,6 +15,7 @@
 			<onclick>Action(close)</onclick>
 		</control>
 		<include condition="Skin.HasSetting(touchmode)">TouchBackOSDButton</include>
+		<!--bottom playback control buttons-->
 		<control type="group">
 			<include>Animation_BottomSlide</include>
 			<bottom>0</bottom>
