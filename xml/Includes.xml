@@ -806,7 +806,7 @@
 				<top>0</top>
 				<right>0</right>
 				<height>70</height>
-				<texture colordiffuse="button_focus" border="2">colors/white70.png</texture>
+				<texture colordiffuse="white" border="2">colors/white70.png</texture>
 			</control>
 			<control type="label" id="$PARAM[header_id]">
 				<left>40</left>
@@ -816,6 +816,7 @@
 				<font>font32_title</font>
 				<label>$PARAM[header_label]</label>
 				<aligny>center</aligny>
+				<textcolor>button_nofocus</textcolor>
 				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="button" id="22002">
