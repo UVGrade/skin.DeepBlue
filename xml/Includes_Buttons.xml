@@ -305,7 +305,7 @@
 				<top>0</top>
 				<width>600</width>
 				<height>70</height>
-				<texture colordiffuse="dialog_tint">colors/white.png</texture>
+				<texture colordiffuse="button_nofocus">colors/white.png</texture>
 			</control>
 			<control type="label">
 				<left>0</left>
