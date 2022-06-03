@@ -1367,7 +1367,7 @@
 				<texture flipx="false" colordiffuse="secondary_background">colors/white.png</texture>
 				<width>120%</width>
 				<height>75</height>
-				<top>210</top>
+				<top>209</top>
 			</control>
 			<control type="label">
 				<font>font_clock</font>
@@ -1375,7 +1375,7 @@
 				<height>205</height>
 				<textcolor>button_nofocus</textcolor>
 				<width>auto</width>
-				<top>200</top>
+				<top>205</top>
 				<left>150</left>
 				<animation effect="fade" start="100" end="0" time="300" condition="Window.Next(screencalibration)">WindowClose</animation>
 				<label>$INFO[System.Time]</label>

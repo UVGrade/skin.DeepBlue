@@ -538,13 +538,13 @@
 					<control type="label">
 						<width>$PARAM[ruler_label_width]</width>
 						<height>45</height>
-						<font>font12</font>
+						<font>font13</font>
 						<label>$INFO[ListItem.Label]</label>
 						<textoffsetx>10</textoffsetx>
-						<textcolor>button_focus</textcolor>
+						<textcolor>white</textcolor>
 					</control>
 				</rulerlayout>
-				<channellayout height="62" width="$PARAM[channel_width]">
+				<channellayout height="65" width="$PARAM[channel_width]">
 					<control type="label">
 						<left>2</left>
 						<top>-2</top>
@@ -592,7 +592,7 @@
 					<control type="image" id="2">
 						<width>58</width>
 						<height>58</height>
-						<texture border="3" fallback="windows/pvr/epg-genres/0.png">$INFO[ListItem.Property(GenreType),windows/pvr/epg-genres/,.png]</texture>
+						<texture border="3" colordiffuse="DD216fa9">lists/focus.png</texture>
 					</control>
 					<control type="label" id="1">
 						<left>6</left>

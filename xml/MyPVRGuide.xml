@@ -15,23 +15,25 @@
 				<include>Visible_Right</include>
 				<control type="group">
 					<top>520</top>
+					<left>100</left>
 					<depth>DepthContentPanel</depth>
 					<control type="image">
 						<left>0</left>
-						<top>-10</top>
+						<top>50</top>
 						<width>100%</width>
 						<bottom>66</bottom>
-						<texture colordiffuse="AA021746">lists/focus.png</texture>
+						<texture colordiffuse="bg_darker">lists/focus.png</texture>
 					</control>
 					<control type="group">
 						<visible>Control.IsVisible(50) | Control.IsVisible(51)</visible>
+						<!--empty gray bar we dont want
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
 							<width>100%</width>
 							<height>50</height>
 							<texture colordiffuse="border_alpha">colors/white50.png</texture>
-						</control>
+						</control>-->
 						<control type="image">
 							<left>42</left>
 							<top>0</top>
@@ -59,6 +61,7 @@
 							<visible>Control.HasFocus(11) + !String.IsEqual(Container(11).CurrentItem, Container(11).NumItems)</visible>
 						</control>
 					</control>
+					<!--Channel Group, not needed
 					<control type="fixedlist" id="11">
 						<top>0</top>
 						<left>40</left>
@@ -108,7 +111,7 @@
 								<label>$INFO[ListItem.Label]</label>
 							</control>
 						</focusedlayout>
-					</control>
+					</control>-->
 					<control type="group" id="63">
 						<include content="EpgGrid">
 							<param name="control_id" value="50"/>
