@@ -465,3 +465,191 @@
 		</control>
 	</include>
 </includes>
+ <include name="HomeScreenSmallPosterLayout" condition="!Skin.HasSetting(home_screen_poster_size)">
+		<param name="focused">false</param>
+		<definition>
+			<control type="group">
+				<visible>String.IsEmpty(ListItem.Art(poster))</visible>
+			<control type="image">
+					<left>15</left>
+					<top>-10</top>
+					<width>220</width>
+					<height>300</height>
+					<texture>dialogs/dialog-bg-nobo.png</texture>
+					<bordertexture border="21">overlays/shadow.png</bordertexture>
+					<bordersize>20</bordersize>
+				</control>
+				
+				<control type="image">
+					<left>15</left>
+					<top>-10</top>
+					<width>220</width>
+					<height>300</height>
+					<texture border="-0">special://skin/extras/PVR_Q/CinemaWidget/Alpha_Border.png</texture>
+						<visible>$PARAM[focused]</visible>
+						<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
+							<bordertexture border="10">special://skin/extras/PVR_Q/CinemaWidget/darkline.png</bordertexture>
+							<bordersize>13</bordersize>
+							<animation type="Focus" reversible="true">
+								<effect type="zoom" center="auto" start="0" end="100" time="200" tween="elastic" easing="inout" />
+							</animation>
+					
+				</control>
+				<control type="textbox">
+					<left>40</left>
+					<top>150</top>
+					<width>175</width>
+					<height>120</height>
+					<font>font27</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					<autoscroll time="2000" delay="3000" repeat="5000">$PARAM[focused]</autoscroll>
+					<visible>!ListItem.IsParentFolder</visible>
+				</control>
+				<control type="image">
+					<left>24</left>
+					<top>-1</top>
+					<width>202</width>
+					<height>170</height>
+					<texture fallback="DefaultMovies.png" background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+					<bordersize>20</bordersize>
+				</control>
+			</control>
+			<control type="group">
+				<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
+				  <control type="image">
+					<left>-33</left>
+					<top>-14</top>
+					<width>228</width>
+					<height>308</height>
+					<aspectratio>auto</aspectratio>					
+					       
+					<texture colordiffuse="ff02075d">colors/grey.png</texture>
+					<bordertexture border="21">overlays/shadow.png</bordertexture>
+					<bordersize>10</bordersize>
+					<visible>$PARAM[focused]</visible>
+					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
+				</control>
+				<control type="image">
+					<left>19</left>
+					<top>-2</top>
+					<width>213</width>
+					<height>282</height>
+					<texture>special://skin/extras/PVR_Q/CinemaWidget/flare-panel-large.png</texture>
+					
+				<visible>$PARAM[focused]</visible>
+				</control>
+				<control type="image">
+					<left>-29</left>
+					<top>-10</top>
+					<width>220</width>
+					<height>300</height>
+					<aspectratio>scale</aspectratio>
+					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
+					<bordersize>13</bordersize>
+					
+					<animation type="Focus" reversible="true">
+					<effect type="zoom" center="auto" start="0" end="100" time="200" tween="elastic" easing="inout" />
+					</animation>
+					<texture background="true">$INFO[ListItem.Art(poster)]</texture>
+					<visible>$PARAM[focused]</visible>
+				</control>
+				<control type="image">
+					<left>15</left>
+					<top>-10</top>
+					<width>220</width>
+					<height>300</height>
+					<aspectratio>scale</aspectratio>
+					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
+					<bordersize>13</bordersize>
+					
+					<animation type="Focus" reversible="true">
+					<effect type="zoom" center="auto" start="0" end="100" time="200" tween="elastic" easing="inout" />
+					</animation>
+					<texture background="true">$INFO[ListItem.Art(poster)]</texture>
+					<visible>!$PARAM[focused]</visible>
+				</control>
+				
+				<control type="image">
+					<left>24</left>
+					<top>282</top>
+					<width>203</width>
+					<height>22</height>
+					<texture>special://skin/extras/PVR_Q/CinemaWidget/CinemaBox_GlowLine_1.png</texture>
+					<visible>$PARAM[focused]</visible>
+					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
+				</control>
+			
+			<control type="image">
+					<left>24</left>
+					<top>280</top>
+					<width>203</width>
+					<height>22</height>
+					<texture>special://skin/extras/PVR_Q/CinemaWidget/CinemaBox_GlowLine_Ball_1.png</texture>
+					<visible>$PARAM[focused]</visible>
+					<include condition="$PARAM[focused]">Animation_FocusTextureFade</include>
+				</control>
+				<control type="image">
+					<left>100</left>
+					<top>190</top>
+					<width>58</width>
+					<height>20</height>
+					<texture>overlays/overlay-bg.png</texture>
+					<visible>Listitem.IsCollection | ListItem.IsPlaying | Integer.IsGreater(ListItem.Playcount,0)</visible>
+				</control>
+			</control>
+			<control type="group">
+				<visible>String.IsEqual(ListItem.DBtype,tvshow)</visible>
+				<top>220</top>
+				<control type="image">
+					<left>35</left>
+					<top>0</top>
+					<width>180</width>
+					<height>50</height>
+					<texture colordiffuse="CCFFFFFF">overlays/overlayfade.png</texture>
+					<visible>!String.IsEmpty(ListItem.Art(poster))</visible>
+				</control>
+				<control type="label">
+					<left>-65</left>
+					<top>20</top>
+					<width>244</width>
+					<label>$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</label>
+					<font>font20_title</font>
+					<shadowcolor>text_shadow</shadowcolor>
+					<align>right</align>
+				</control>
+				<control type="image">
+					<left>185</left>
+					<top>23</top>
+					<width>24</width>
+					<height>24</height>
+					<texture>lists/played-total.png</texture>
+				</control>
+			</control>
+			<control type="image">
+				<left>35</left>
+				<top>235</top>
+				<width>32</width>
+				<height>32</height>
+				<texture>$VAR[WallWatchedIconVar]</texture>
+			</control>
+			<control type="group">
+				<left>100	</left>
+				<top>-8</top>
+				<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
+			</control>
+			<control type="progress">
+				<left>35</left>
+				<top>250</top>
+				<width>180</width>
+				<height>1</height>
+				<texturebg></texturebg>
+				<midtexture colordiffuse="button_focus" border="3">progress/texturebg_alt_white.png</midtexture>
+				<info>ListItem.PercentPlayed</info>
+				<visible>!Integer.IsEqual(ListItem.PercentPlayed,0)</visible>
+			</control>
+		</definition>
+	</include>
+</includes>
