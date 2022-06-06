@@ -15,14 +15,22 @@
 			<imagepath colordiffuse="35FFFFFF">$INFO[Skin.String(HomeFanart.path)]settings$INFO[Skin.String(HomeFanart.ext)]</imagepath>
 			<visible>!Player.HasMedia + !String.IsEmpty(Skin.String(HomeFanart.path))</visible>
 		</control>
+		<!--right content view-->
+		<control type="group">
+			<left>462</left>
+				<top>315</top>
+			<include>BodyPanel</include>
+		</control>
 		<control type="group">
 			<include>OpenClose_Right</include>
+			
 			<control type="grouplist" id="5">
+			
 				<description>control area</description>
-				<top>133</top>
-				<left>470</left>
+				<top>350</top>
+				<left>500</left>
 				<pagecontrol>60</pagecontrol>
-				<right>0</right>
+				<right>100</right>
 				<bottom>137</bottom>
 				<onleft>3</onleft>
 				<onright>60</onright>
@@ -80,18 +88,17 @@
 			<textcolor>grey</textcolor>
 			<shadowcolor>black</shadowcolor>
 		</control>
+		<!--left-->
 		<control type="group">
 			<depth>DepthContentPanel</depth>
 			<include>OpenClose_Left</include>
-			<include content="ContentPanel">
-				<param name="width" value="530" />
-			</include>
+			
 			<control type="grouplist" id="3">
 				<description>button area</description>
 				<left>0</left>
-				<top>130</top>
+				<top>335</top>
 				<width>470</width>
-				<height>810</height>
+				<height>620</height>
 				<usecontrolcoords>true</usecontrolcoords>
 				<onleft>5</onleft>
 				<onright>5</onright>
@@ -110,6 +117,7 @@
 				<texturenofocus />
 			</control>
 		</control>
+		<!--no idea-->
 		<control type="group">
 			<right>0</right>
 			<top>133</top>
@@ -132,7 +140,7 @@
 				<hitrect x="0" y="0" w="60" h="100%" />
 			</control>
 		</control>
-		<include content="TopBar">
+		<include content="HeadingPanel">
 			<param name="breadcrumbs_label" value="$LOCALIZE[5]$INFO[Control.GetLabel(2), / ]" />
 		</include>
 		<include>BottomBar</include>
@@ -142,7 +150,7 @@
 			<control type="radiobutton" id="20">
 				<width>470</width>
 				<left>0</left>
-				<bottom>70</bottom>
+				<bottom>0</bottom>
 				<height>90</height>
 				<aligny>center</aligny>
 				<onclick>SettingsLevelChange</onclick>
