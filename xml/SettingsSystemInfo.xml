@@ -19,9 +19,17 @@
 			<left>40</left>
 			<top>133</top>
 			<include>OpenClose_Right</include>
+			<control type="image">
+				<texture flipx="false" colordiffuse="button_bg">colors/white.png</texture>
+				<bordersize>20</bordersize>
+				<width>1380</width>
+				<height>1200</height>
+				<top>180</top>
+				<left>480</left>
+			</control>
 			<control type="grouplist">
-				<left>420</left>
-				<top>30</top>
+				<left>525</left>
+				<top>215</top>
 				<height>550</height>
 				<orientation>vertical</orientation>
 				<control type="label" id="2">
@@ -81,9 +89,9 @@
 				</control>
 			</control>
 			<control type="textbox" id="30">
-				<left>420</left>
+				<left>515</left>
 				<right>50</right>
-				<top>30</top>
+				<top>245</top>
 				<bottom>347</bottom>
 				<pagecontrol>60</pagecontrol>
 				<autoscroll delay="5000" repeat="7500" time="5000">!Control.HasFocus(60)</autoscroll>
@@ -113,13 +121,10 @@
 			</control>
 		</control>
 		<control type="group">
-			<left>0</left>
-			<top>0</top>
+			<left>70</left>
+			<top>200</top>
 			<depth>DepthContentPanel</depth>
 			<include>OpenClose_Left</include>
-			<include content="ContentPanel">
-				<param name="width" value="480" />
-			</include>
 			<control type="grouplist" id="9000">
 				<left>0</left>
 				<top>130</top>
@@ -189,10 +194,13 @@
 		<include content="TopBar">
 			<param name="breadcrumbs_label" value="$LOCALIZE[130]" />
 		</include>
+		<include content="HeadingPanel">
+			<param name="breadcrumbs_label" value="$LOCALIZE[130]" />
+		</include>
 		<include>BottomBar</include>
 		<control type="group">
 			<bottom>0</bottom>
-			<left>40</left>
+			<left>160</left>
 			<height>370</height>
 			<include>OpenClose_Right</include>
 			<control type="image">
