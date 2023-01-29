@@ -24,6 +24,7 @@
 				<include>Visible_Left</include>
 				<!--sidebar image + description
 				<include>ListThumbInfoPanel</include>-->
+				<include>NarrowListThumbInfoPanel</include>
 			</control>
 			<control type="group">
 				<depth>DepthContentPanel</depth>
@@ -82,6 +83,9 @@
 			<include content="HeadingPanel">
 				<param name="breadcrumbs_label" value="$VAR[BreadcrumbsVideoVar]" />
 			</include>
+			<include content="BottomSort">
+				<param name="breadcrumbs_label" value="$LOCALIZE[24001]" />
+			</include>
 
 			<include content="BottomBar">
 				<param name="info_visible" value="true" />
@@ -99,7 +103,7 @@
 			<control type="group">
 				<include>MediaMenuCommon</include>
 				<control type="grouplist" id="9000">
-					<top>50</top>
+					<top>300</top>
 					<include>MediaMenuListCommon</include>
 					<control type="button" id="10">
 						<description>Watched Toggle</description>

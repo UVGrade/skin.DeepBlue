@@ -12,7 +12,7 @@
 			<name>font12</name>
 			<filename>NotoSans-Regular.ttf</filename>
 			<size>25</size>
-			<style>lighten</style>
+			<style>lighten bold</style>
 		</font>
 		<font>
 			<name>font13</name>

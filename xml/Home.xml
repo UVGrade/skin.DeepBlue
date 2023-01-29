@@ -600,7 +600,7 @@
 							<control type="button">
 								<top>20</top>
 								<height>55</height>
-								<texturenofocus colordiffuse="button_focus">lists/focus.png</texturenofocus>
+								<texturenofocus colordiffuse="button_nofocus">lists/focus.png</texturenofocus>
 								<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
 								
 							</control>
@@ -1004,13 +1004,12 @@
 					<!--<scrolltime tween="cubic" easing="out">500</scrolltime>-->
 					<!-- what it looks like when selected -->
 					<focusedlayout height="61"> 
-
+							
 						<control type="button">
 							<top>20</top>
 							<height>55</height>
-							<texturenofocus colordiffuse="button_focus">lists/focus.png</texturenofocus>
+							<texturenofocus colordiffuse="bg_darker">lists/focus.png</texturenofocus>
 							<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
-							
 						</control>
 						
 						<control type="label">
@@ -1058,7 +1057,9 @@
 					<content>
 						<item>
 							<label>$LOCALIZE[31001]</label>
-							<onclick>ActivateWindow(1107)</onclick>
+							<onclick condition="System.AddonIsEnabled(script.globalsearch)">RunScript(script.globalsearch)</onclick>
+						<onclick condition="System.HasAddon(script.globalsearch) + !System.AddonIsEnabled(script.globalsearch)">EnableAddon(script.globalsearch)</onclick>
+						<onclick condition="!System.HasAddon(script.globalsearch)">InstallAddon(script.globalsearch)</onclick>
 							<property name="menu_id">$NUMBER[5000]</property>
 							<property name="id">search</property>
 						</item>
