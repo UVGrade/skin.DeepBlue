@@ -41,11 +41,14 @@
 					</control>
 				</control>
 			</control>
-			<include content="TopBar">
-				<param name="breadcrumbs_label" value="$LOCALIZE[24001]" />
+			<include content="HeadingPanel">
+				<param name="breadcrumbs_label" value="$LOCALIZE[2]" />
 			</include>
 			<include content="BottomBar">
 				<param name="info_visible" value="true" />
+			</include>
+			<include content="BottomSort">
+				<param name="breadcrumbs_label" value="$LOCALIZE[24001]" />
 			</include>
 			<include>MediaMenuMouseOverlay</include>
 			<control type="group">

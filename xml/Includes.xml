@@ -858,6 +858,22 @@
 			</control>
 		</control>
 	</include>
+	<include name="BottomSort">
+		<param name="sublabel">$INFO[Container.SortMethod,$LOCALIZE[31022]: ,  ∙  ]$INFO[Container.CurrentItem,, / ]$INFO[Container.NumItems]</param>
+			<definition>
+				<control type="label" id="18900">
+				<bottom>0</bottom>
+				<right>10</right>
+				<label>$PARAM[sublabel]</label>
+				<shadowcolor>text_shadow</shadowcolor>
+				<height>60</height>
+				<width>400</width>
+				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+				<animation effect="slide" end="70,0" time="200" reversible="true" condition="Control.IsVisible(799)">Conditional</animation>
+			</control>
+		</definition>
+	</include>
 	<include name="TopBar">
 		<param name="sublabel">$INFO[Container.SortMethod,$LOCALIZE[31022]: ,  ∙  ]$INFO[Container.CurrentItem,, / ]$INFO[Container.NumItems]</param>
 		<definition>
@@ -1182,6 +1198,7 @@
 	</include>
 	<include name="BottomBar">
 		<param name="info_visible">False</param>
+		
 		<definition>
 			<control type="group">
 				<animation effect="slide" end="0,112" time="300" tween="sine" easing="inout" condition="$EXP[infodialog_active]">conditional</animation>
@@ -1390,7 +1407,7 @@
 				<textcolor>button_nofocus</textcolor>
 				<size>65</size>
 				<top>40</top>
-				<left>920</left>
+				<left>490</left>
 				<height>150</height>
 				<width>auto</width>
 			</control>

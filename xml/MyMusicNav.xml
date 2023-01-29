@@ -21,12 +21,17 @@
 				<include>Visible_Left</include>
 				<!--sidebar image + description
 				<include>ListThumbInfoPanel</include>-->
+				
+				<include>NarrowListThumbInfoPanel</include>
 			</control>
 			<include content="HeadingPanel">
 				<param name="breadcrumbs_label" value="$LOCALIZE[2]" />
 			</include>
 			<include content="BottomBar">
 				<param name="info_visible" value="true" />
+			</include>
+			<include content="BottomSort">
+				<param name="breadcrumbs_label" value="$LOCALIZE[24001]" />
 			</include>
 			<include>MediaMenuMouseOverlay</include>
 			<control type="group">

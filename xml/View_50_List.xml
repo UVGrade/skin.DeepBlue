@@ -222,6 +222,131 @@
 			</control>
 		</definition>
 	</include>
+	<include name="NarrowListThumbInfoPanel">
+		<param name="fallback_image"></param>
+		<param name="flip_bg">false</param>
+		<definition>
+			<control type="group">
+				<depth>DepthContentPanel</depth>
+				<control type="image">
+					<left>145</left>
+					<top>270</top>
+					<width>250</width>
+					<height>250</height>
+					<aspectratio>keep</aspectratio>
+					<fadetime>300</fadetime>
+					<texture fallback="$PARAM[fallback_image]" background="true">$VAR[IconWallThumbVar]</texture>
+					<visible>!String.IsEqual(ListItem.DbType,episode) + !String.IsEqual(ListItem.DBType,song)</visible>
+				</control>
+				<control type="image">
+					<left>145</left>
+					<top>270</top>
+					<width>250</width>
+					<height>250</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<fadetime>300</fadetime>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<visible>String.IsEqual(ListItem.DbType,episode)</visible>
+				</control>
+				<control type="image">
+					<left>145</left>
+					<top>270</top>
+					<width>250</width>
+					<height>250</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<fadetime>300</fadetime>
+					<texture fallback="DefaultAudio.png" background="true">$VAR[IconWallThumbVar]</texture>
+					<visible>String.IsEqual(ListItem.DBType,song)</visible>
+				</control>
+				<control type="group">
+					<left>273</left>
+					<top>560</top>
+					<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
+					<animation effect="slide" end="0,-140" time="0" condition="String.IsEqual(ListItem.DbType,episode)">conditional</animation>
+				</control>
+				<control type="group">
+					<visible>!Container.Content() | !String.isempty(ListItem.Plot)</visible>
+					<left>30</left>
+					<control type="textbox" id="15500">
+						<top>600</top>
+						<width>540</width>
+						<bottom>70</bottom>
+						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
+						<label>$VAR[ListBoxInfoVar]</label>
+						<visible>!String.IsEqual(ListItem.DbType,episode) + !String.IsEqual(ListItem.DBType,song)</visible>
+					</control>
+					<control type="textbox" id="15501">
+						<top>465</top>
+						<width>540</width>
+						<bottom>70</bottom>
+						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
+						<label>$INFO[ListItem.Plot]</label>
+						<visible>String.IsEqual(ListItem.DbType,episode)</visible>
+					</control>
+					<control type="textbox" id="15502">
+						<top>600</top>
+						<width>540</width>
+						<bottom>70</bottom>
+						<autoscroll time="3000" delay="3000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
+						<label>$VAR[ListBoxInfoVar]</label>
+						<visible>String.IsEqual(ListItem.DBType,song)</visible>
+					</control>
+				</control>
+				<control type="group">
+					<left>20</left>
+					<top>640</top>
+					<visible>ListItem.IsCollection + String.IsEmpty(ListItem.Plot)</visible>
+					<include content="InfoList">
+						<param name="bottom" value="100" />
+						<param name="width" value="540" />
+						<param name="sortby" value="year" />
+						<param name="sortorder" value="ascending" />
+						<param name="font" value="font13" />
+					</include>
+				</control>
+				<control type="group">
+					<visible>!ListItem.IsCollection + String.IsEmpty(Control.GetLabel(15500)) + Control.IsVisible(15500)</visible>
+					<control type="textbox">
+						<left>350</left>
+						<top>130</top>
+						<width>540</width>
+						<height>413</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>font27</font>
+						<textcolor>80FFFFFF</textcolor>
+						<label>$LOCALIZE[19055]</label>
+						<visible>!ListItem.IsParentFolder</visible>
+						<visible>!Integer.IsGreater(Container(42000).NumItems,0) + !Integer.IsGreater(Container(43000).NumItems,0)</visible>
+						<visible>!Container.Content() | !String.isempty(ListItem.Plot)</visible>
+					</control>
+					<control type="group">
+						<left>20</left>
+						<top>640</top>
+						<visible>!String.IsEmpty(ListItem.DBID)</visible>
+						<include content="InfoList">
+							<param name="list_id" value="42000" />
+							<param name="bottom" value="100" />
+							<param name="width" value="540" />
+							<param name="sortby" value="year" />
+							<param name="sortorder" value="ascending" />
+							<param name="item_label" value="$INFO[ListItem.Year,[COLOR button_focus],[/COLOR]  -  ]$INFO[ListItem.Label]" />
+							<param name="visible" value="String.IsEqual(ListItem.DBType,artist)" />
+						</include>
+						<include content="InfoList">
+							<param name="list_id" value="43000" />
+							<param name="bottom" value="100" />
+							<param name="width" value="540" />
+							<param name="sortby" value="track" />
+							<param name="sortorder" value="ascending" />
+							<param name="item_label" value="$INFO[ListItem.Duration,[COLOR button_focus],[/COLOR]  -  ]$INFO[ListItem.Label]" />
+							<param name="visible" value="String.IsEqual(ListItem.DBType,album)" />
+						</include>
+					</control>
+				</control>
+			</control>
+		</definition>
+	</include>
 	<include name="ListThumbInfoPanel">
 		<param name="fallback_image"></param>
 		<param name="flip_bg">false</param>

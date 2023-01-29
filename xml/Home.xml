@@ -577,6 +577,149 @@
 						<param name="scrollbar_id" value="14010"/>
 					</include>
 				</control>
+				<control type="group" id="18000">
+					<visible>String.IsEqual(Container(9000).ListItem.Property(id),systemSet)</visible>
+					<include content="Visible_Right_Delayed">
+						<param name="id" value="systemSet"/>
+					</include>
+					<control type="list" id="18001">
+						<left>700</left>
+						<top>50</top>
+						<width>450</width>
+						<bottom>-10</bottom>
+						<movement>5</movement>
+						<spacing>500</spacing>
+						<focusposition>0</focusposition>
+						<onleft>9000</onleft>
+						<onup>700</onup>
+						<ondown>700</ondown>
+						<!--<scrolltime tween="cubic" easing="out">500</scrolltime>-->
+						<!-- what it looks like when selected -->
+						<focusedlayout height="61"> 
+
+							<control type="button">
+								<top>20</top>
+								<height>55</height>
+								<texturenofocus colordiffuse="button_nofocus">lists/focus.png</texturenofocus>
+								<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
+								
+							</control>
+							
+							<control type="label">
+								<left>104</left>
+								<top>0</top>
+								<height>95</height>
+								<width>560</width>
+								<aligny>center</aligny>
+								<font>font37</font>
+								<texture colordiffuse="button_focus">lists/focus.png</texture>
+								<label>$INFO[ListItem.Label]</label>
+								<shadowcolor>text_shadow</shadowcolor>
+							</control>
+						</focusedlayout>
+						<itemlayout height="61">
+							<control type="button">
+								<top>20</top>
+								<texturenofocus colordiffuse="button_nofocus">lists/focus.png</texturenofocus>
+								<height>55</height>
+							</control>
+							<control type="label">
+								<left>75</left>
+								<top>0</top>
+								<height>95</height>
+								<width>560</width>
+								<aligny>center</aligny>
+								<font>font37</font>
+								<label>$INFO[ListItem.Label]</label>
+								<texture colordiffuse="button_focus">lists/focus.png</texture>
+					
+								<shadowcolor>text_shadow</shadowcolor>
+							</control>
+						</itemlayout>
+						<content>
+							<item>
+								<label>$LOCALIZE[10003]</label>
+								<onclick>ActivateWindow(filemanager)</onclick>
+								<icon>icons/settings/filemanager.png</icon>
+							</item>
+							<item>
+								<label>$LOCALIZE[24001]</label>
+								<onclick>ActivateWindow(addonbrowser)</onclick>
+								<icon>icons/settings/addons.png</icon>
+							</item>
+							<item>
+								<label>$LOCALIZE[138]</label>
+								<onclick>ActivateWindow(systeminfo)</onclick>
+								<icon>icons/settings/sysinfo.png</icon>
+							</item>
+							<item>
+								<label>$LOCALIZE[31067]</label>
+								<onclick>ActivateWindow(eventlog)</onclick>
+								<icon>icons/settings/eventlog.png</icon>
+							</item>
+							<item>
+								<label>$LOCALIZE[14200]</label>
+								<onclick>ActivateWindow(PlayerSettings)</onclick>
+								<icon>icons/settings/player.png</icon>
+							</item>
+							<item>
+								<label>$LOCALIZE[14211]</label>
+								<onclick>ActivateWindow(MediaSettings)</onclick>
+								<icon>icons/settings/media.png</icon>
+							</item>
+							<item>
+								<label>$LOCALIZE[14204]</label>
+								<onclick>ActivateWindow(PVRSettings)</onclick>
+								<icon>icons/settings/livetv.png</icon>
+							</item>
+							<item>
+								<label>$LOCALIZE[14036]</label>
+								<onclick>ActivateWindow(ServiceSettings)</onclick>
+								<icon>icons/settings/network.png</icon>
+							</item>
+							<item>
+								<label>$LOCALIZE[15016]</label>
+								<visible>System.GetBool(gamesgeneral.enable)</visible>
+								<onclick>ActivateWindow(GameSettings)</onclick>
+								<icon>icons/settings/games.png</icon>
+							</item>
+							<item>
+								<label>$LOCALIZE[14206]</label>
+								<onclick>ActivateWindow(InterfaceSettings)</onclick>
+								<icon>icons/settings/interface.png</icon>
+							</item>
+							<item>
+								<label>$LOCALIZE[13200]</label>
+								<onclick>ActivateWindow(Profiles)</onclick>
+								<icon>icons/settings/profiles.png</icon>
+							</item>
+							<item>
+								<label>$LOCALIZE[13000]</label>
+								<onclick>ActivateWindow(SystemSettings)</onclick>
+								<icon>icons/settings/system.png</icon>
+							</item>
+							<item>
+								<label>LibreELEC</label>
+								<onclick>RunAddon(service.libreelec.settings)</onclick>
+								<icon>icons/settings/libreelec.png</icon>
+								<visible>System.AddonIsEnabled(service.libreelec.settings)</visible>
+							</item>
+						</content>
+					</control>
+					<control type="grouplist" id="700">
+						<orientation>horizontal</orientation>
+						<itemgap>0</itemgap>
+						<left>-8</left>
+						<width>480</width>
+						<height>110</height>
+						<top>100</top>
+						<onup>SetFocus(9000,99,absolute)</onup>
+						<ondown>SetFocus(9000,0,absolute)</ondown>
+						<onright>2000</onright>
+						<align>justify</align>
+						
+					</control>
+				</control>
 				<control type="group" id="15000">
 					<visible>String.IsEqual(Container(9000).ListItem.Property(id),weather)</visible>
 					<include content="Visible_Right_Delayed">
@@ -861,13 +1004,12 @@
 					<!--<scrolltime tween="cubic" easing="out">500</scrolltime>-->
 					<!-- what it looks like when selected -->
 					<focusedlayout height="61"> 
-
+							
 						<control type="button">
 							<top>20</top>
 							<height>55</height>
-							<texturenofocus colordiffuse="button_focus">lists/focus.png</texturenofocus>
+							<texturenofocus colordiffuse="bg_darker">lists/focus.png</texturenofocus>
 							<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
-							
 						</control>
 						
 						<control type="label">
@@ -915,7 +1057,9 @@
 					<content>
 						<item>
 							<label>$LOCALIZE[31001]</label>
-							<onclick>ActivateWindow(1107)</onclick>
+							<onclick condition="System.AddonIsEnabled(script.globalsearch)">RunScript(script.globalsearch)</onclick>
+						<onclick condition="System.HasAddon(script.globalsearch) + !System.AddonIsEnabled(script.globalsearch)">EnableAddon(script.globalsearch)</onclick>
+						<onclick condition="!System.HasAddon(script.globalsearch)">InstallAddon(script.globalsearch)</onclick>
 							<property name="menu_id">$NUMBER[5000]</property>
 							<property name="id">search</property>
 						</item>
@@ -1015,18 +1159,19 @@
 							<property name="id">weather</property>
 							<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
 						</item>
+						<!--System Settings-->
 						<item>
 							<label>$LOCALIZE[13000]</label>
 							<onclick>ActivateWindow(settings)</onclick>
-							<property name="menu_id">$NUMBER[15000]</property>
-							<property name="id">weather</property>
+							<property name="menu_id">$NUMBER[18000]</property>
+							<property name="id">systemSet</property>
 							<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
 						</item>
+						<!--Exit Dialog-->
 						<item>
 							<label>$LOCALIZE[13012]</label>
 							<onclick>ActivateWindow(shutdownmenu)</onclick>
-							<property name="menu_id">$NUMBER[15000]</property>
-							<property name="id">weather</property>
+							<property name="menu_id">$NUMBER[5000]</property>
 							<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
 						</item>
 					</content>
