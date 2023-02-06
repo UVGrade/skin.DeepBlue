@@ -1,0 +1,16 @@
+{
+  "sqltools.connections": [
+    {
+      "mysqlOptions": {
+        "authProtocol": "default"
+      },
+      "previewLimit": 50,
+      "server": "db.ethereallab.app",
+      "port": 3306,
+      "driver": "MySQL",
+      "name": "test",
+      "username": "asr48",
+      "database": "asr48"
+    }
+  ]
+}
