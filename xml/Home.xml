@@ -966,93 +966,6 @@
 						<param name="scrollbar_id" value="17010"/>
 					</include>
 				</control>
-				<control type="group" id="18000">
-					<visible>String.IsEqual(Container(9000).ListItem.Property(id),system)</visible>
-					<include content="Visible_Right_Delayed">
-						<param name="id" value="system"/>
-					</include>
-					<control type="panel" id="180001">
-						<left>50</left>
-						<width>100%</width>
-						<top>50</top>
-						<height>800</height>
-						<onup>noop</onup>
-						<ondown>Control.SetFocus(18001,$INFO[Container(18001).Position],absolute)</ondown>
-						<include>SettingsPanelHome</include>
-						<content>
-							<item>
-								<label>$LOCALIZE[10003]</label>
-								<onclick>ActivateWindow(filemanager)</onclick>
-								<icon>icons/settings/filemanager.png</icon>
-							</item>
-							<item>
-								<label>$LOCALIZE[24001]</label>
-								<onclick>ActivateWindow(addonbrowser)</onclick>
-								<icon>icons/settings/addons.png</icon>
-							</item>
-							<item>
-								<label>$LOCALIZE[138]</label>
-								<onclick>ActivateWindow(systeminfo)</onclick>
-								<icon>icons/settings/sysinfo.png</icon>
-							</item>
-							<item>
-								<label>$LOCALIZE[31067]</label>
-								<onclick>ActivateWindow(eventlog)</onclick>
-								<icon>icons/settings/eventlog.png</icon>
-							</item>
-							<item>
-								<label>$LOCALIZE[14200]</label>
-								<onclick>ActivateWindow(PlayerSettings)</onclick>
-								<icon>icons/settings/player.png</icon>
-							</item>
-							<item>
-								<label>$LOCALIZE[14211]</label>
-								<onclick>ActivateWindow(MediaSettings)</onclick>
-								<icon>icons/settings/media.png</icon>
-							</item>
-							<item>
-								<label>$LOCALIZE[14204]</label>
-								<onclick>ActivateWindow(PVRSettings)</onclick>
-								<icon>icons/settings/livetv.png</icon>
-							</item>
-							<item>
-								<label>$LOCALIZE[14036]</label>
-								<onclick>ActivateWindow(ServiceSettings)</onclick>
-								<icon>icons/settings/network.png</icon>
-							</item>
-							<item>
-								<label>$LOCALIZE[15016]</label>
-								<visible>System.GetBool(gamesgeneral.enable)</visible>
-								<onclick>ActivateWindow(GameSettings)</onclick>
-								<icon>icons/settings/games.png</icon>
-							</item>
-							<item>
-								<label>$LOCALIZE[14206]</label>
-								<onclick>ActivateWindow(InterfaceSettings)</onclick>
-								<icon>icons/settings/interface.png</icon>
-							</item>
-							<item>
-								<label>$LOCALIZE[13200]</label>
-								<onclick>ActivateWindow(Profiles)</onclick>
-								<icon>icons/settings/profiles.png</icon>
-							</item>
-							<item>
-								<label>$LOCALIZE[13000]</label>
-								<onclick>ActivateWindow(SystemSettings)</onclick>
-								<icon>icons/settings/system.png</icon>
-							</item>
-							<item>
-								<label>LibreELEC</label>
-								<onclick>RunAddon(service.libreelec.settings)</onclick>
-								<icon>icons/settings/libreelec.png</icon>
-								<visible>System.AddonIsEnabled(service.libreelec.settings)</visible>
-							</item>
-						</content>
-					</control>
-					<include content="WidgetScrollbar" condition="Skin.HasSetting(touchmode)">
-						<param name="scrollbar_id" value="18010"/>
-					</include>
-				</control>
 				<control type="group" id="21000">
 					<visible>String.IsEqual(Container(9000).ListItem.Property(id),disc)</visible>
 					<include content="Visible_Right_Delayed">
@@ -1251,7 +1164,7 @@
 							<label>$LOCALIZE[13000]</label>
 							<onclick>ActivateWindow(settings)</onclick>
 							<property name="menu_id">$NUMBER[18000]</property>
-							<property name="id">system</property>
+							<property name="id">systemSet</property>
 							<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
 						</item>
 						<!--Exit Dialog-->
