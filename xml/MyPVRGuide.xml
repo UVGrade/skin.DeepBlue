@@ -88,7 +88,7 @@
 								<align>center</align>
 								<aligny>center</aligny>
 								<label>$INFO[ListItem.Label]</label>
-								<textcolor>lightgrey</textcolor>
+								<textcolor>lightblack</textcolor>
 							</control>
 						</itemlayout>
 						<focusedlayout height="50" width="368">
@@ -194,7 +194,7 @@
 						<control type="label">
 							<width>70%</width>
 							<height>30</height>
-							<label>[B]$INFO[ListItem.EpgEventTitle][/B] $INFO[ListItem.Year,([COLOR grey],[/COLOR])]</label>
+							<label>[B]$INFO[ListItem.EpgEventTitle][/B] $INFO[ListItem.Year,([COLOR black],[/COLOR])]</label>
 						</control>
 						<control type="label">
 							<top>0</top>
@@ -202,13 +202,13 @@
 							<width>30%</width>
 							<height>30</height>
 							<align>right</align>
-							<label>[COLOR button_focus]$INFO[ListItem.StartTime,[COLOR grey]$LOCALIZE[555]:[/COLOR] ][/COLOR]$INFO[ListItem.EndTime,[COLOR button_focus] - ,[/COLOR]]</label>
+							<label>[COLOR button_focus]$INFO[ListItem.StartTime,[COLOR black]$LOCALIZE[555]:[/COLOR] ][/COLOR]$INFO[ListItem.EndTime,[COLOR button_focus] - ,[/COLOR]]</label>
 						</control>
 						<control type="label">
 							<top>35</top>
 							<width>60%</width>
 							<height>30</height>
-							<label>$VAR[FlagDashLabel][I][COLOR grey]$VAR[SeasonEpisodeLabel][/COLOR]$INFO[ListItem.EpisodeName,[COLOR white],[/COLOR]][/I]</label>
+							<label>$VAR[FlagDashLabel][I][COLOR black]$VAR[SeasonEpisodeLabel][/COLOR]$INFO[ListItem.EpisodeName,[COLOR white],[/COLOR]][/I]</label>
 						</control>
 						<control type="label">
 							<top>35</top>
@@ -216,7 +216,7 @@
 							<width>40%</width>
 							<height>30</height>
 							<align>right</align>
-							<label>$INFO[ListItem.Genre,[COLOR grey]$LOCALIZE[515]:[/COLOR] ]</label>
+							<label>$INFO[ListItem.Genre,[COLOR black]$LOCALIZE[515]:[/COLOR] ]</label>
 						</control>
 					</control>
 					<control type="textbox">

@@ -79,7 +79,7 @@
 							<align>right</align>
 							<label>$INFO[ListItem.Title]</label>
 							<shadowcolor>text_shadow</shadowcolor>
-							<textcolor>grey</textcolor>
+							<textcolor>black</textcolor>
 						</control>
 						<control type="label">
 							<left>10</left>
@@ -90,7 +90,7 @@
 							<aligny>center</aligny>
 							<font>font32_title</font>
 							<label>$INFO[ListItem.ChannelNumberLabel]</label>
-							<textcolor>grey</textcolor>
+							<textcolor>black</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 					</itemlayout>

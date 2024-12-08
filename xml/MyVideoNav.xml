@@ -24,20 +24,44 @@
 				<include>Visible_Left</include>
 				<!--sidebar image + description
 				<include>ListThumbInfoPanel</include>-->
+				<include>NarrowListThumbInfoPanel</include>
 			</control>
 			<control type="group">
 				<depth>DepthContentPanel</depth>
 				<include>OpenClose_Left</include>
 				<visible>Control.IsVisible(50) | Control.Isvisible(54) | [Control.IsVisible(501) + String.IsEqual(Skin.AspectRatio,21:9)]</visible>
 				<include>Visible_Left</include>
-				<include content="ContentPanel">
+				<!--<include content="ContentPanel">
 					<param name="width" value="656" />
-				</include>
+				</include>-->
+				
 				<control type="group">
 					<width>550</width>
+					<left>700</left>
+					<!--background color-->
+					<control type="image">
+						<texture flipx="false" colordiffuse="button_bg">colors/white.png</texture>
+						<bordersize>20</bordersize>
+						<width>1200</width>
+						<height>1200</height>
+						<top>315</top>
+					</control>
+					<!--preview image-->
+					<control type="image">
+						<depth>DepthContentPopout</depth>
+						<left>600</left>
+						<top>400</top>
+						<width>540</width>
+						<height>400</height>
+						<bottom>124</bottom>
+						<fadetime>200</fadetime>
+						<aspectratio aligny="bottom">keep</aspectratio>
+						<texture fallback="DefaultVideo.png" background="true">$VAR[InfoWallThumbVar]</texture>
+					</control>
+					
 					<control type="textbox">
-						<top>120</top>
-						<left>30</left>
+						<top>350</top>
+						<left>50</left>
 						<width>550</width>
 						<aligny>center</aligny>
 						<height>110</height>
@@ -45,18 +69,18 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="textbox">
-						<left>30</left>
-						<top>240</top>
-						<width>525</width>
+						<left>50</left>
+						<top>800</top>
+						<width>1000</width>
 						<bottom>100</bottom>
 						<visible>![ListItem.IsCollection + String.IsEmpty(ListItem.Plot)]</visible>
 						<label>$INFO[ListItem.Tagline,[I],[/I][CR][CR]]$INFO[ListItem.Plot][CR][CR]</label>
 						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
 					</control>
 					<control type="textbox">
-						<left>30</left>
-						<top>360</top>
-						<width>530</width>
+						<left>50</left>
+						<top>800</top>
+						<width>1000</width>
 						<height>413</height>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -79,8 +103,12 @@
 					</control>
 				</control>
 			</control>
+			<!--Global Heading-->
 			<include content="HeadingPanel">
 				<param name="breadcrumbs_label" value="$VAR[BreadcrumbsVideoVar]" />
+			</include>
+			<include content="BottomSort">
+				<param name="breadcrumbs_label" value="$LOCALIZE[24001]" />
 			</include>
 
 			<include content="BottomBar">
@@ -99,7 +127,7 @@
 			<control type="group">
 				<include>MediaMenuCommon</include>
 				<control type="grouplist" id="9000">
-					<top>50</top>
+					<top>300</top>
 					<include>MediaMenuListCommon</include>
 					<control type="button" id="10">
 						<description>Watched Toggle</description>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.DeepBlue" version="0.0.1" name="Deep Blue" provider-name="darthgamer64">
+<addon id="skin.DeepBlue" version="0.2.0" name="Deep Blue" provider-name="darthgamer64">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
 	</requires>
@@ -56,7 +56,7 @@
 		<summary lang="sr_RS">Маска Deep Blue аутора darthgamer64.</summary>
 		<summary lang="sr_RS@latin">Maska Deep Blue autora darthgamer64.</summary>
 		<summary lang="sv_SE">Deep Blue, ett skal av darthgamer64.</summary>
-		<summary lang="szl">Skōra Deep Blue ôd darthgamer64.</summary>
+		<summary lang="szl">Skōra Deep Blue ôd darthgamer64.</summary>  
 		<summary lang="th_TH">สกิน Deep Blue โดย darthgamer64.</summary>
 		<summary lang="tr_TR">Deep Blue dış görünümü. darthgamer64.</summary>
 		<summary lang="uk_UA">Обкладинка Deep Blue від darthgamer64.</summary>

@@ -7,7 +7,7 @@
 			<include>Visible_Right</include>
 			<control type="list" id="55">
 				<left>150</left>
-				<top>400</top>
+				<top>500</top>
 				<bottom>50</bottom>
 				<right>150</right>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
