@@ -90,7 +90,6 @@
 			<textcolor>grey</textcolor>
 			<shadowcolor>black</shadowcolor>
 		</control>
-		<!--side panel buttons-->
 		<control type="group">
 			<depth>DepthContentPanel</depth>
 			<include>OpenClose_Left</include>
@@ -100,7 +99,7 @@
 				<left>0</left>
 				<top>335</top>
 				<width>470</width>
-				<height>810</height>
+				<height>620</height>
 				<usecontrolcoords>true</usecontrolcoords>
 				<onleft>5</onleft>
 				<onright>5</onright>
@@ -119,6 +118,7 @@
 				<texturenofocus />
 			</control>
 		</control>
+		<!--no idea-->
 		<control type="group">
 			<right>0</right>
 			<top>133</top>
@@ -141,7 +141,7 @@
 				<hitrect x="0" y="0" w="60" h="100%" />
 			</control>
 		</control>
-		<include content="TopBar">
+		<include content="HeadingPanel">
 			<param name="breadcrumbs_label" value="$LOCALIZE[5]$INFO[Control.GetLabel(2), / ]" />
 		</include>
 		<include>BottomBar</include>
@@ -151,7 +151,7 @@
 			<control type="radiobutton" id="20">
 				<width>470</width>
 				<left>0</left>
-				<bottom>70</bottom>
+				<bottom>0</bottom>
 				<height>90</height>
 				<aligny>center</aligny>
 				<onclick>SettingsLevelChange</onclick>
