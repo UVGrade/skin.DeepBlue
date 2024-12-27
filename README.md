@@ -6,5 +6,5 @@
  shoot me any suggestions, new Kodi skins to work on, or other feedback at info@uvgrade.com
 
 # Compatibility & branches
-branches with version numbers (eg. v20) are for specific older Kodi versions to retain compatibility
-the main brnach and all others will utilize the latest version of Kodi (v21)
+* branches with version numbers (eg. v20) are for specific older Kodi versions to retain compatibility
+* the main brnach and all others will utilize the latest version of Kodi (v21)
