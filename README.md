@@ -5,4 +5,6 @@
  Want to support me? Please consider [Buying me a coffee ☕](https://www.buymeacoffee.com/UVGrade)
  shoot me any suggestions, new Kodi skins to work on, or other feedback at info@uvgrade.com
 
-NOTE, this is only compatible with Kodi version 20 at the moment. I am spinning this project back up so I will work to update it but on the meantime, you can find older downloads here. https://mirrors.kodi.tv/releases/
+# Compatibility & branches
+branches with version numbers (eg. v20) are for specific older Kodi versions to retain compatibility
+the main brnach and all others will utilize the latest version of Kodi (v21)
