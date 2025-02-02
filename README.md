@@ -8,3 +8,6 @@
 # Compatibility & branches
 * branches with version numbers (eg. v20) are for specific older Kodi versions to retain compatibility
 * the main brnach and all others will utilize the latest version of Kodi (v21)
+
+
+code live tv top bar is in Custom_1109_TopBarOverlay.xml
