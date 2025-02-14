@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.deepblue" version="0.2.1" name="Deep Blue" provider-name="darthgamer64">
+<addon id="skin.deepblue" version="0.2.2" name="Deep Blue" provider-name="darthgamer64">
 	<requires>
 		<import addon="xbmc.gui" version="5.17.0"/>
 	</requires>
