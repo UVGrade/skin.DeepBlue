@@ -13,6 +13,20 @@ Repo is compatible with Kodi versions: v20, v21, v22
 
 1. In Kodi, navigate to File Manager > Add Source > enter the URL: `https://kodi.uvgrade.com/install/`
 2. Then: Go to Settings > Add-ons > Install from zip file → **repository.uvgrade-repository.uvgrade-1.0.0.zip.zip**
+3. Then: Go to Settings > Add-ons > Install from Repository > "UVGrade" > navigate to look & feel
+
+## Dev Setup
+1. Ensure you have GIT installed on your OS and recommended to use VSCode
+2. Copy the GIT URL from the main Github page
+3. run the command `git clone <git URL>` either in your terminal or "Git Clone" in VSCode and select the Roaming Kodi directory
+   - For windows `%appdata%\kodi\addons`
+   - For Mac `~/Library/Application Support/Kodi/addons/`
+   - For Linux `~/.kodi/userdata/addon_data/` or for SNAP Packages `~/snap/kodi/current/.kodi/addons/`
+4. Then: Go to Settings > Interface > Skin > Skin and it should appear here
+
+## Manual ZIP install of repo
+1. Navigate to the [Kodi site](https://kodi.uvgrade.com/) and download the latest repository ZIP
+2. Then: Go to Settings > Add-ons > Install from zip file → locate the ZIP file you downloaded from your *Downloads* folder
 
 # Development
 ## Collaboration and Suggestions
