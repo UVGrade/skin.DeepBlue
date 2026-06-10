@@ -160,7 +160,7 @@
 				<texture>frame/osdfade.png</texture>
 			</control>-->
 			<control type="image">
-				<texture flipx="false" colordiffuse="button_bg">colors/white.png</texture>
+				<texture flipx="false" colordiffuse="pvr_banner">colors/white.png</texture>
 				<width>120%</width>
 				<height>180</height>
 				<top>0</top>
@@ -174,25 +174,20 @@
 			<control type="group">
 				<animation effect="slide" end="90,0" time="0" condition="Skin.HasSetting(touchmode)">conditional</animation>
 				<control type="grouplist">
-					<visible>!String.IsEmpty(Player.Art(tvshow.clearlogo)) | !String.IsEmpty(Player.Art(clearlogo))</visible>
-					<top>10</top>
+					<visible>!String.IsEmpty(Player.Art(tvshow.clearlogo)) | !String.IsEmpty(Player.Art(clearlogo)) | !String.IsEmpty(Player.Icon)</visible>
+					<top>0</top>
 					<left>20</left>
 					<right>400</right>
-					<height>100</height>
+					<height>300</height>
 					<itemgap>10</itemgap>
 					<orientation>horizontal</orientation>
 					<control type="image">
-						<width>300</width>
-						<texture>$VAR[PlayerClearLogoVar]</texture>
-						<aspectratio aligny="center" align="center">keep</aspectratio>
-					</control>
-					<control type="label">
-						<align>left</align>
-						<aligny>center</aligny>
-						<font>font13</font>
-						<label>$VAR[OSDSubLabelVar]</label>
-						<shadowcolor>text_shadow</shadowcolor>
-						<scroll>true</scroll>
+						<left>20</left>
+						<top>50</top>
+						<width>200</width>
+						<height>150</height>
+						<aspectratio aligny="center">keep</aspectratio>
+						<texture>$INFO[Player.Icon]</texture>
 					</control>
 				</control>
 				<control type="group">
@@ -200,17 +195,31 @@
 					<visible>String.IsEmpty(Player.Art(clearlogo))</visible>
 					<visible>String.IsEmpty(Player.Art(tvshow.clearlogo))</visible>
 					<animation effect="fade" time="150">VisibleChange</animation>
-					<left>400</left>
+					<left>200</left>
 					<top>70</top>
-					<right>400</right>
+					<!--sourced from DiagSeekBar.xml-->
+					<control type="label">
+						<left>20</left>
+						<width>290</width>
+						<top>15</top>
+						<height>25</height>
+						<label>$INFO[VideoPlayer.ChannelNumberLabel]</label>
+						<shadowcolor>black</shadowcolor>
+						<align>center</align>
+						<font>WeatherTemp</font>
+						<aligny>center</aligny>
+					</control>
 					<control type="label">
 						<top>40</top>
+						<left>320</left>
 						<label>$VAR[NowPlayingBreadcrumbsVar]</label>
 						<font>font45</font>
 						<shadowcolor>text_shadow</shadowcolor>
 						<height>50</height>
 					</control>
+					<!--this is code for channel name and number-->
 					<control type="label">
+						<left>320</left>
 						<label>$VAR[OSDSubLabelVar]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 						<height>60</height>
@@ -230,6 +239,55 @@
 					<align>left</align>
 					<textcolor>button_nofocus</textcolor>
 					<label>$INFO[System.Time]</label>
+				</control>
+				<!-- duration should go here-->
+				<control type="label">
+					<shadowcolor>text_shadow</shadowcolor>
+					<top>185</top>
+					<font>font45_title</font>
+					<left>500</left>
+					<height>200</height>
+					<width>900</width>
+					<align>left</align>
+					<textcolor>button_nofocus</textcolor>
+					<label>$VAR[OSDDurationTime]</label>
+				</control>
+				<control type="label">
+					<shadowcolor>text_shadow</shadowcolor>
+					<top>185</top>
+					<font>font45_title</font>
+					<right>100</right>
+					<height>200</height>
+					<width>900</width>
+					<align>left</align>
+					<textcolor>button_nofocus</textcolor>
+					<label>$INFO[VideoPlayer.ParentalRating]</label>
+				</control>
+				<control type="grouplist">
+					<right>20</right>
+					<centertop>20</centertop>
+					<width>800</width>
+					<height>50</height>
+					<align>right</align>
+					
+					<orientation>horizontal</orientation>
+					<itemgap>10</itemgap>
+					<animation effect="fade" start="0" end="100" time="200" delay="1000">Visible</animation>
+					<include content="MediaFlag">
+					<param name="texture" value="$INFO[VideoPlayer.VideoCodec,flags/videocodec/,.png]" />
+					</include>
+					<include content="MediaFlag">
+					<param name="texture" value="$INFO[VideoPlayer.VideoResolution,flags/videoresolution/,.png]" />
+					</include>
+					<include content="MediaFlag">
+						<param name="texture" value="$INFO[VideoPlayer.VideoAspect,flags/aspectratio/,.png]" />
+					</include>
+					<include content="MediaFlag">
+						<param name="texture" value="$INFO[VideoPlayer.AudioCodec,flags/audiocodec/,.png]" />
+					</include>
+					<include content="MediaFlag">
+						<param name="texture" value="$INFO[VideoPlayer.AudioChannels,flags/audiochannel/,.png]" />
+					</include>
 				</control>
 
 				<!--<control type="grouplist">
