@@ -1,24 +1,145 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">9000</defaultcontrol>
-	<onload>SetProperty(infobackground,$ESCINFO[ListItem.Art(fanart)],home)</onload>
-	<onunload>ClearProperty(infobackground,home)</onunload>
+	<defaultcontrol>5</defaultcontrol>
+	<include>Animation_DialogPopupOpenClose</include>
 	<controls>
 		<control type="group">
-			<animation effect="fade" start="0" end="100" time="100">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="100">WindowClose</animation>
-			<animation effect="fade" start="100" end="75" time="0" condition="true">Conditional</animation>
-			<visible>Window.isActive(fullscreenvideo)</visible>
-			<include>ColoredBackgroundImages</include>
-		</control>
-		<control type="group">
-			<centertop>50%</centertop>
-			<height>1080</height>
+			<top>105</top>
 			<centerleft>50%</centerleft>
-			<width>1920</width>
+			<width>1520</width>
+			<include>Animation_DialogPopupVisible</include>
+			<visible>!Window.IsVisible(sliderdialog)</visible>
+			<include content="DialogBackgroundCommons">
+				<param name="width" value="1520" />
+				<param name="height" value="870" />
+				<param name="header_label" value="$INFO[ListItem.Title]" />
+				<param name="header_id" value="2" />
+			</include>
+			<control type="list" id="49">
+				<left>40</left>
+				<top>80</top>
+				<width>900</width>
+				<height>330</height>
+				<onleft>49</onleft>
+				<onright>49</onright>
+				<onup>9000</onup>
+				<ondown>61</ondown>
+				<pagecontrol/>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="30">
+					<control type="label">
+						<left>5</left>
+						<top>0</top>
+						<width>160</width>
+						<height>30</height>
+						<font>font13</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>blue</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<left>175</left>
+						<top>0</top>
+						<width>1200</width>
+						<height>30</height>
+						<font>font13</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<selectedcolor>white</selectedcolor>
+						<info>ListItem.Label2</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="30">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>640</width>
+						<height>30</height>
+						<visible>Control.HasFocus(49)</visible>
+						<texture>MenuItemFO.png</texture>
+						<include>VisibleFadeEffect</include>
+					</control>
+					<control type="label">
+						<left>5</left>
+						<top>0</top>
+						<width>160</width>
+						<height>30</height>
+						<font>font13</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>blue</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<left>175</left>
+						<top>0</top>
+						<width>465</width>
+						<height>30</height>
+						<font>font13</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<selectedcolor>white</selectedcolor>
+						<info>ListItem.Label2</info>
+						<scroll>true</scroll>
+					</control>
+				</focusedlayout>
+				<content>
+					<item>
+						<label>$LOCALIZE[21442]:</label>
+						<label2>$INFO[ListItem.EpisodeName]</label2>
+						<visible>!String.IsEmpty(ListItem.EpisodeName)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[20373]:</label>
+						<label2>$INFO[ListItem.Season]</label2>
+						<visible>!String.IsEmpty(ListItem.Season)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[20359]:</label>
+						<label2>$INFO[ListItem.Episode]</label2>
+						<visible>!String.IsEmpty(ListItem.Episode)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[19148]:</label>
+						<label2>$INFO[ListItem.ChannelName]</label2>
+					</item>
+					<item>
+						<label>$LOCALIZE[142]</label>
+						<label2>$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime] ($INFO[ListItem.StartDate])</label2>
+					</item>
+					<item>
+						<label>$LOCALIZE[180]:</label>
+						<label2>$INFO[ListItem.Duration]</label2>
+					</item>
+					<item>
+						<label>$LOCALIZE[515]:</label>
+						<label2>$INFO[ListItem.Genre]</label2>
+					</item>
+					<item>
+						<label>$LOCALIZE[20417]:</label>
+						<label2>$INFO[ListItem.Writer]</label2>
+						<visible>!String.IsEmpty(ListItem.Writer)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[20339]:</label>
+						<label2>$INFO[ListItem.Director]</label2>
+						<visible>!String.IsEmpty(ListItem.Director)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[206]:</label>
+						<label2>$INFO[ListItem.Cast]</label2>
+						<visible>!String.IsEmpty(ListItem.Cast)</visible>
+					</item>
+				</content>
+			</control>
 			<control type="image">
 				<include>OpenClose_Left</include>
-				<left>114</left>
+				<left>50</left>
 				<top>236</top>
 				<width>461</width>
 				<height>461</height>
@@ -30,9 +151,9 @@
 				<left>50</left>
 				<include>OpenClose_Right</include>
 				<control type="button" id="61">
-					<left>600</left>
+					<left>500</left>
 					<top>-18</top>
-					<width>1170</width>
+					<width>900</width>
 					<height>509</height>
 					<font></font>
 					<onleft>61</onleft>
@@ -44,17 +165,17 @@
 					<onclick>ActivateWindow(1102)</onclick>
 				</control>
 				<control type="textbox" id="400">
-					<left>660</left>
+					<left>560</left>
 					<top>20</top>
-					<width>1050</width>
+					<width>800</width>
 					<height>425</height>
 					<align>justify</align>
-					<label>$INFO[ListItem.ChannelName,[B],[/B][CR]]$INFO[ListItem.Date,[COLOR grey]$LOCALIZE[552]:[/COLOR] ,[CR]]$INFO[ListItem.Duration,[COLOR grey]$LOCALIZE[180]:[/COLOR] ,[CR]]$VAR[RecordingSizeLabel]$VAR[PremieredLabel]$INFO[ListItem.Rating,[COLOR grey]$LOCALIZE[563]:[/COLOR] ,[CR]]$VAR[ExpirationDateTimeLabel]$INFO[ListItem.Genre,[COLOR grey]$LOCALIZE[515]:[/COLOR] ,[CR]]$INFO[ListItem.Writer,[COLOR grey]$LOCALIZE[20417]:[/COLOR] ,[CR]]$INFO[ListItem.Director,[COLOR grey]$LOCALIZE[20339]:[/COLOR] ,[CR]]$INFO[ListItem.Cast,[COLOR grey]$LOCALIZE[206]:[/COLOR] ,[CR]][CR]$INFO[ListItem.Plot]</label>
+					<label>$INFO[ListItem.Plot]</label>
 					<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 				<control type="grouplist" id="9000">
-					<left>150</left>
-					<top>600</top>
+					<left>0</left>
+					<top>500</top>
 					<width>1520</width>
 					<height>160</height>
 					<itemgap>10</itemgap>
@@ -115,11 +236,6 @@
 					</include>
 				</control>
 			</control>
-			<include content="InfoDialogTopBarInfo">
-				<param name="main_label" value="$INFO[ListItem.Title] $INFO[ListItem.Year,([COLOR grey],[/COLOR])]" />
-				<param name="sub_label" value="$VAR[FlagDashLabel][COLOR grey]$VAR[SeasonEpisodeLabel][/COLOR]$INFO[ListItem.EpisodeName,[COLOR white][B],[/B][/COLOR]]" />
-				<param name="posy" value="40" />
-			</include>
 		</control>
 		<include condition="Skin.HasSetting(touchmode)">TouchBackButton</include>
 	</controls>
